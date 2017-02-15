@@ -1,6 +1,6 @@
 # Harbor
 
-![Icon](https://raw.githubusercontent.com/n9y25ah7/Herbert/master/readme_resources/icon.png "Harbor")
+![Icon](https://raw.githubusercontent.com/n9y25ah7/Herbert/master/readme_resources/icon.png "Herbert")
 
 
 
