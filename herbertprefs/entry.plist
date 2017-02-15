@@ -1,0 +1,10 @@
+{
+	entry = {
+		bundle = herbertprefs;
+		cell = PSLinkCell;
+		detail = HPListController;
+		icon = "herbertprefs.png";
+		isController = 1;
+		label = herbert;
+	};
+}
