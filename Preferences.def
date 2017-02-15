@@ -70,9 +70,9 @@ PREF(NSNumber*, useNormalBackground, @(false), @"Use Normal Dock Background", PS
 
 GROUP("", "Follow for info on updates, deals, and new projects.", )
 
-RAW_ENTRY(PSButtonCell, @"action" : @"follow:", @"icon" : @"twitter.png", @"label" : @"@e_swick on Twitter", )
+RAW_ENTRY(PSButtonCell, @"action" : @"follow:", @"icon" : @"twitter.png", @"label" : @"@PressSec on Twitter", )
 
-GROUP("Copyright \u00A9 2015 Evan Swick. All rights reserved.", "", )
+GROUP("Copyright\u00A9 2017 n9y25ah7 . All rights reserved.", "", )
 
 #undef PREF
 #undef GROUP

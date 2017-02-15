@@ -947,19 +947,19 @@ Use different icon state plist so that SpringBoard doesn't mess up the dock
 when we are in safe mode
 */
 
-#define harborPlistStore "file:///var/mobile/Library/SpringBoard/IconState_harbor.plist"
+#define herbertPlistStore "file:///var/mobile/Library/SpringBoard/IconState_herbert.plist"
 
 - (BOOL)_save:(id)arg1 url:(id)arg2 error:(id *)arg3 {
 
 	if ([[prefs getenabled] boolValue])
-		%orig(arg1, [NSURL URLWithString:@harborPlistStore], arg3);
+		%orig(arg1, [NSURL URLWithString:@herbertPlistStore], arg3);
 
 	return %orig(arg1, arg2, arg3);
 }
 
 - (id)_load:(NSURL*)path error:(id *)arg2 {
-	if ([[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Library/SpringBoard/IconState_harbor.plist"] && [[prefs getenabled] boolValue]) {
-		return %orig([NSURL URLWithString:@harborPlistStore], arg2);
+	if ([[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Library/SpringBoard/IconState_herbert.plist"] && [[prefs getenabled] boolValue]) {
+		return %orig([NSURL URLWithString:@herbertPlistStore], arg2);
 	}
 
 	return %orig(path, arg2);

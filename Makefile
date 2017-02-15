@@ -6,20 +6,20 @@ export TARGET = iphone:latest
 export ARCHS = armv7 arm64
 endif
 
-include theos/makefiles/common.mk
+include $(THEOS_MAKE_PATH)/common.mk
 
-TWEAK_NAME = Harbor
+TWEAK_NAME = herbert
 
-Harbor_FILES += Tweak.xm SBIconView.xm CAKeyframeAnimation+dockBounce.m HBPreferences.m
-Harbor_FILES += extensions/UIView+Origin.m
+herbert_FILES += Tweak.xm SBIconView.xm CAKeyframeAnimation+dockBounce.m HBPreferences.m
+herbert_FILES += extensions/UIView+Origin.m
 
-Harbor_CFLAGS += -Iinclude -Iextensions
+herbert_CFLAGS += -Iinclude -Iextensions
 
-Harbor_FRAMEWORKS += CoreGraphics UIKit QuartzCore
+herbert_FRAMEWORKS += CoreGraphics UIKit QuartzCore
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 
 after-install::
 	install.exec "killall -9 SpringBoard"
-SUBPROJECTS += harborprefs
+SUBPROJECTS += herbertprefs
 include $(THEOS_MAKE_PATH)/aggregate.mk

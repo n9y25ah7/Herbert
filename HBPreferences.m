@@ -1,7 +1,7 @@
 #import "HBPreferences.h"
 #import <notify.h>
 
-#define PREFS_PATH [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Preferences/com.eswick.harbor.plist"]
+#define PREFS_PATH [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Preferences/us.n9y25ah7.herbert.plist"]
 
 
 /* Dictionary tools */
@@ -25,7 +25,7 @@ static NSDictionary* defaults() {
 - (void)set##NAME:(TYPE)newValue { \
 	self.dictionary[@#NAME] = newValue; \
 	[self.dictionary writeToFile:PREFS_PATH atomically:true]; \
-	notify_post("com.eswick.harbor.preferences_changed"); \
+	notify_post("us.n9y25ah7.herbert.preferences_changed"); \
 }
 
 #include "Preferences.def"
@@ -50,7 +50,7 @@ static NSDictionary* defaults() {
 
 				int token, status;
 
-				status = notify_register_dispatch("com.eswick.harbor.preferences_changed", &token,
+				status = notify_register_dispatch("us.n9y25ah7.herbert.preferences_changed", &token,
 					dispatch_get_main_queue(), ^(int t) {
 						[_prefs setDictionary:nil];
 				});
